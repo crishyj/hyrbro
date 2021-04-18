@@ -1,0 +1,38 @@
+$(document).ready(function () {
+    $('.navbar-light .dmenu').hover(function () {
+        $(this).find('.sm-menu').first().stop(true, true).slideDown(150);
+    }, function () {
+        $(this).find('.sm-menu').first().stop(true, true).slideUp(105)
+    });
+
+    $(".megamenu").on("click", function(e) {
+        e.stopPropagation();
+    });
+
+    $('.searchbox').focus(function() {
+        $('.navigation-megamenu').css('display', 'none');
+    });
+
+    $('.searchbox').blur(function() {
+        $('.navigation-megamenu').css('display', 'block');
+        $('#dropdown07').removeClass('show');
+    });
+
+    $('.searchbox').keyup(function () {  
+        $('#dropdown07').addClass('show');  
+        if(!$('.searchbox').val()){
+            $('#dropdown07').removeClass('show');
+        }    
+    });
+
+    if(!$('.searchbox').val()){
+        $('#dropdown07').removeClass('show');
+    } else{
+        $('#dropdown07').addClass('show');
+    }
+
+    
+    
+}); 
+
+        
