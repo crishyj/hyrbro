@@ -177,7 +177,7 @@
 
 .menu{
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .search_box{
@@ -273,12 +273,19 @@
 
 
 .content{
+    padding-top: 50px;
     min-height: 500px;
+    position:relative;
+    z-index: 1;
+    background: #F5F5F5;
+    padding-bottom: 100px;
 }
 
 .footer{
     background-color: #F6C143;
     padding: 50px 0;
+    position: relative;
+    z-index: 1;
 }
 
 .footer_box{
@@ -499,8 +506,139 @@
     color: #222222;
     opacity: 0.8;
     padding-top: 20px;
-
 }
+
+
+/********** content section ************/
+
+#startupCarousel{
+    background-color: #000;
+}
+
+#startupCarousel .carousel-item{
+    height: 370px;
+}
+
+#startupCarousel .carousel-item img{
+    width: 100%;
+    opacity: 0.7;
+}
+
+.carousel-caption{
+    top: 20%;
+    left: 20%;
+    right: 20%;
+}
+
+.carousel_title{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 65px;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    width: 8%;
+}
+
+.carousel-caption p{
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.offer .row{
+    justify-content: space-between;
+}
+
+.offer_title{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #333333;
+}
+
+.offer_item{
+    width: 210px;
+    /* height: 240px; */
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.offer_img img{
+    width: 100%;
+}
+
+.offer_btn{
+    text-align: center;
+    width: 190px;
+    height: 40px;
+    border-radius: 4px;
+    border: solid 1px #E0E0E0;
+    padding-top: 7px;
+}
+
+.offer_btn:hover{
+    background: #F6C143;
+    font-weight: 600;
+}
+
+.popProducts_title{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.pop_product{
+    margin-top: 20px;
+}
+
+.popProduct_img img{
+    width: 100%;
+}
+
+.popProduct_title{
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.map_title
+{
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+#map_container{
+    position: relative;
+}
+
+#map{
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 22.25%;
+    padding-top: 30px;
+    position: relative;
+    margin-top: 20px;
+}
+
+/*************** end content section *****************/
 
 @media (max-width: 1200px) {
     .navigation-logo svg{
@@ -511,6 +649,7 @@
 @media (max-width: 992px) {
     .menu{
         height: 70px;
+        z-index: 3;
     }
 
     .navigation-body-header{
@@ -569,7 +708,7 @@
     .search_box{
         padding-bottom: 5px;
         height: auto;
-        z-index: 0;
+        z-index: 2;
     }
 
     .searchbox{
@@ -716,5 +855,44 @@
         max-height: 500px;
         transition: max-height 1s ease-out;
     }
+
+    #startupCarousel .carousel-item{
+        height: inherit;
+    }
    
+}
+
+@media (max-width: 765px) {
+    .carousel-caption{
+        top: 0%;
+        left: 5%;
+        right: 5%;
+    }
+}
+
+@media (max-width: 410px) {
+    .carousel-caption{
+        top: 0%;
+        left: 5%;
+        right: 5%;
+    }
+    .carousel_title {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    
+}
+
+
+@media (max-width: 340px) {
+    .carousel_title {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    .carousel-caption p {
+        font-size: 17px;
+        line-height: 22px;
+    }
 }
