@@ -557,7 +557,7 @@ body{
 }
 
 .offer .row{
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .offer_title{
@@ -570,10 +570,13 @@ body{
 
 .offer_item{
     width: 210px;
-    /* height: 240px; */
     background-color: #fff;
     border-radius: 2px;
     padding: 5px;
+    border-radius: 4px;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: 2px 2px 2px #3333332b;
 }
 
 .offer_img img{
@@ -659,7 +662,8 @@ body{
     overflow: hidden;
     padding-bottom:56.25%;
     position:relative;
-    height:0;
+    width: 340px;
+    height: 264px;
 }
 
 .responsive-map iframe{
@@ -673,6 +677,15 @@ body{
 
 
 /************** product page start **************/
+
+.product_nav{
+    font-size: 13px;
+    margin-top: -30px;
+}
+
+.product_nav .parent{
+    color: #2A64B1;
+}
 
 .product_header{
     display: flex;
@@ -1301,6 +1314,14 @@ body{
         left: 5%;
         right: 5%;
     }
+
+    #product_carousel .carousel-inner{
+        height: 238px;
+    }
+
+    .accordion{
+        margin-left: -15px;
+    }
 }
 
 @media (max-width: 410px) {
@@ -1321,6 +1342,8 @@ body{
     .rend_title, .checkSec_title, .otherBooked_title{
         font-size: 26px;
     }
+
+ 
 
     
 }
