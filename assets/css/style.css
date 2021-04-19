@@ -1,3 +1,8 @@
+body{
+    color: #333333;
+    font-family: 'Nunito', sans-serif;
+}
+
 .navbar{
     background: #F6C143;
     padding-top: 40px;
@@ -636,7 +641,7 @@
     padding-bottom: 20px;
 }
 
-#map_container{
+/* #map_container{
     position: relative;
 }
 
@@ -648,8 +653,22 @@
     padding-top: 30px;
     position: relative;
     margin-top: 20px;
+} */
+
+.responsive-map{
+    overflow: hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
 }
 
+.responsive-map iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
 /*************** end content section *****************/
 
 
@@ -837,6 +856,7 @@
 .checkSec_item{
     width: 204px;   
     margin: 20px; 
+    text-align: center;
 }
 
 .checkSec_img img{
@@ -854,8 +874,7 @@
 }
 
 .checkSec_btn
-{
-    background: #F6C143;
+{    
     border-radius: 4px;
     width: 172px;
     height: 32px;
@@ -867,7 +886,11 @@
     text-align: center;
     margin: auto;
     margin-top: 10px;
-    border: none;
+    border: solid 1px #E0E0E0
+}
+
+.checkSec_btn:hover{
+    background: #F6C143;
 }
 
 .otherBooked{
@@ -917,6 +940,136 @@
     letter-spacing: 0em;
     text-align: left;
 }
+
+.rend_calendar{
+    min-height: 400px;
+    margin-top: 40px;
+    border-radius: 4px;
+    box-shadow: 1px 2px 2px 2px #00000038;
+}
+
+.rend_table{
+    margin-top: 40px;
+}
+
+.rend_first{
+    display: flex;
+}
+
+.rend_first .rend_tcol{
+    width: 50%;
+}
+
+.rend_tcol{
+    background-color: #E0E0E0;   
+    margin: 2px;
+    padding: 10px;
+}
+
+.rend_tcol .rend_tHead{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.rend_tcol .rend_time{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2a64b1;
+}
+
+.rend_second{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rend_sHead{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.rend_sText{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: right;
+}
+
+.rend_second .active{
+    font-weight: 600;
+}
+
+.rend_btn{
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    background-color: #F6C143;
+    border: none;
+    width: 100%;
+    border-radius: 4px;
+    height: 50px;
+}
+
+.rend_header{
+    display: flex !important;
+    justify-content: space-between;
+}
+
+.mobile_navOnly .rend_table{
+    margin-top: 0;
+}
+
+.mobile_navOnly .rend_header {
+    margin-top: 40px;
+}
+
+.rend_changeDate{
+    width: 110px;
+    border-radius: 4px;
+    background-color: #333333;
+    text-align: center;
+    height: 24px;
+    margin-top: 10px;
+}
+
+.rend_changeDate a{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #F5F5F5;    
+}
+
+.rend_changeDate a:hover{
+    text-decoration: none;
+}
+
+
+.mobile_navOnly .checkSec_item{
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
 
 /***************** product page end *****************/
 
@@ -1159,6 +1312,14 @@
     .carousel_title {
         font-size: 40px;
         line-height: 40px;
+    }
+
+    .product_title{
+        font-size: 32px;
+    }
+
+    .rend_title, .checkSec_title, .otherBooked_title{
+        font-size: 26px;
     }
 
     
