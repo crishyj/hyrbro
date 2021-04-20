@@ -192,6 +192,10 @@ body{
     height: 40px;
 }
 
+.search_box .container{
+    padding-right: 8px;
+}
+
 .search_box a input{
     width: 100%;
 }
@@ -569,7 +573,7 @@ body{
 }
 
 .offer_item{
-    width: 210px;
+    width: 215px;
     background-color: #fff;
     border-radius: 2px;
     padding: 5px;
@@ -590,6 +594,7 @@ body{
     border-radius: 4px;
     border: solid 1px #E0E0E0;
     padding-top: 7px;
+    margin: auto;
 }
 
 .offer_btn a{
@@ -604,6 +609,41 @@ body{
 .offer_btn:hover{
     background: #F6C143;
     font-weight: 600;
+}
+
+#offer_carousel .row,
+#pop_carousel .row{
+    margin-right: 17px;
+    margin-left: 5px;
+}
+
+#offer_carousel .col-6,
+#pop_carousel .col-6{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#offer_carousel .offer_item
+{
+    width: 100%;
+    height: 180px;
+}
+
+#offer_carousel .offer_img img{
+    height: 110px;
+}
+
+#pop_carousel .popProduct_img img{
+    height: 136px;
+}
+
+#pop_carousel .popProduct_img{
+    box-shadow: 2px 2px 2px #00000038;   
+}
+
+#offer_carousel .offer_btn{
+    width: auto;
+    margin-top: 15px;
 }
 
 .popProducts_title{
@@ -775,6 +815,7 @@ body{
 #product_desc #faq .card {
     margin-bottom: 5px;
     border: 0;
+    margin-left: -5px;
   }
   
 #product_desc #faq .card .card-header {
@@ -806,6 +847,8 @@ body{
     line-height: 29px;
     letter-spacing: 0em;
     text-align: left;
+    padding-left: 5px;
+    padding-right: 0px;
 }
 
 #product_desc #faq .card .card-header .btn-header-link:after {
@@ -1304,6 +1347,10 @@ body{
 
     #startupCarousel .carousel-item{
         height: inherit;
+    }
+
+    .responsive-map{
+        width: 100%;
     }
    
 }
