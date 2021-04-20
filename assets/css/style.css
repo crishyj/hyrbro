@@ -831,7 +831,7 @@ body{
     display: block;
     text-align: left; 
     color: #222;
-    padding: 20px;
+    padding: 20px 5px;
     font-style: normal;
     font-weight: 700;
     line-height: 20px;
