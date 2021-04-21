@@ -521,7 +521,7 @@ body{
 /********** content section ************/
 
 #startupCarousel{
-    background-color: #000;
+    /* background-color: #000; */
 }
 
 #startupCarousel .carousel-item{
@@ -530,7 +530,7 @@ body{
 
 #startupCarousel .carousel-item img{
     width: 100%;
-    opacity: 0.7;
+    /* opacity: 0.7; */
 }
 
 .carousel-caption{
