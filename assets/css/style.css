@@ -1427,8 +1427,85 @@ body {
 
 /***************** thanks page end *******************/
 
+.thanks_title{
+    padding-top: 15px;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 65px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.thanksPage{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    width: 394px;
+    box-shadow: 1px 3px 3px 0px #3333334d;
+    height: 360px;
+}
+
+.thanks_left{
+    float: right;
+}
+
+.thanks_right{
+    float: left;
+}
+
+.thanks_subTitle{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.thaks_desc{
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.thaks_desc1{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+}
 
 
+.thanks_desc1 a{
+    color: #333333;
+    text-decoration: none;
+}
+
+.thanks_desc1 a:hover{
+    color: #333333;
+    text-decoration: none;
+}
+
+.thanks_desc2{
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #33333362;
+}
+
+.thanks_desc2 span{
+    font-weight: 800;
+}
 /***************** thanks page end *******************/
 
 
@@ -1526,9 +1603,9 @@ body {
         display: flex;
     }
 
-        .navigation-login svg, .logged svg {
-            width: 45px;
-        }
+    .navigation-login svg, .logged svg {
+        width: 45px;
+    }
 
     .nav_ext .nav-link {
         padding: .5rem 0;
@@ -1698,6 +1775,16 @@ body {
 
     .cart_price{
         font-size: 15px;
+    }
+
+    .thanksPage{
+        width: auto;
+        height: auto;
+    }
+
+    .thanks_left,
+    .thanks_right{
+        float: unset;
     }
 
 
