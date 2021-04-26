@@ -1140,7 +1140,7 @@ body {
 
 /***************** product page end *****************/
 
-/***************** cart page start ******************/
+/***************** order1 page start ******************/
 
 .cart_body{
     background-color: #fff;
@@ -1391,11 +1391,46 @@ body {
     border-radius: 4px;
     height: 50px;
     color: #ffffff;
+} 
+
+
+/***************** order1 page end *******************/
+
+/***************** order2 page start *******************/
+
+.customerInfo_title{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0em;
+    text-align: left;
 }
-  
+
+.customerInfo_desc{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;    
+}
+
+.reqire_star{
+    float: right;
+    padding-top: 5px;
+    color: #EB5757;
+    font-size: 13px;
+}
+
+/***************** order2 page end *******************/
 
 
-/***************** cart page end *******************/
+/***************** thanks page end *******************/
+
+
+
+/***************** thanks page end *******************/
+
 
 
 
