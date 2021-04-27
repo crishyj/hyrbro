@@ -223,6 +223,14 @@ body {
     border-radius: 7px 0px 0 7px !important;
 }
 
+.left_divider{
+    margin-top: 9px;
+    width: 1px;
+    height: 36px;
+    background: #33333385;
+    z-index: 100;
+}
+
 .searchBox_img {
     width: 100%;
 }
