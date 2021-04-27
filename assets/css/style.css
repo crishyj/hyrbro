@@ -180,7 +180,7 @@ body {
         text-align: center;
         pointer-events: none;
         color: #aaa;
-        padding-top: 8px;
+        margin-top: 8px;
     }
 
 .busket_btn {
@@ -1763,6 +1763,11 @@ body {
 
     .has-search .fa-search {
         right: 0;
+        border-left: solid 1px #33333379;
+    }
+
+    .left_divider{
+        display: none;
     }
 
     .megamenu_title {
