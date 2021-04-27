@@ -65,7 +65,7 @@
 							</a>
 						</div>
 						<div class="navigation-login">
-							<a href="" class="mobile_login">
+							<a href="" class="mobile_login" data-toggle="modal" data-target="#loginModal">
 								<svg width="47" height="44" viewBox="0 0 47 44" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M12.0488 30C12.0488 30 10.5616 23 24 23C37.4384 23 35.9512 30 35.9512 30" stroke="#333333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 									<circle cx="24" cy="16" r="6.5" stroke="#333333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -680,7 +680,7 @@
 						</ul>
 						<ul class="navigation-menu">
 							<li class="navigation-item align-to-right">
-								<a class="navigation-link" href="#">
+								<a class="navigation-link" href="#" data-toggle="modal" data-target="#loginModal">
 									<div class="login">
 										<img src="./assets/img/logouted.png" alt="">
 									</div>
@@ -698,6 +698,144 @@
 		</div>
 
 	</section>
+
+	<div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">      
+          <div class="modal-content">            
+            <div class="modal-body">
+                <div class="modal_title">
+                    Ny kund
+                </div>
+                <div class="modal_text">
+                    Är du inte kund sedan tidigare kan du skapa ett konto med Mobilt BankID eller med mobilnummer och lösenord.
+                </div>
+
+                <div class="mt-3 mb-3">
+                    <button class="rend_btn">
+                        Ny kund
+                    </button>
+                </div>
+
+                <div class="modal_title">
+                    Befintlig kund
+                </div>
+
+                <div class="modal_text">
+                    Verifiera dig med Mobilt BankID oeller med mobilnummer och lösenord.
+                </div>
+
+                <div class="">
+                    <button class="login_btn" id="monbile_bankId">
+                        <svg class="bankId" width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25.5849 8.95971C26.6034 2.5553 22.513 0 16.6464 0H10.1686L9.30492 5.44214H10.4049C11.0079 5.44214 11.5782 5.1672 11.8227 4.77097C11.9042 4.64159 11.9368 4.52838 11.9368 4.42325C11.9368 4.19683 11.7819 4.02702 11.6271 3.91381C11.2034 3.59844 11.1138 3.2669 11.1138 3.03239C11.1138 2.98388 11.1138 2.94344 11.122 2.90301C11.2116 2.32888 11.9938 1.70623 13.0286 1.70623C13.6479 1.70623 14.1205 1.85178 14.4056 2.11863C14.6582 2.35314 14.756 2.68468 14.6827 3.03239C14.593 3.4448 14.1775 3.78443 13.9412 3.95424C13.3138 4.39091 13.3953 4.77097 13.436 4.88418C13.5664 5.22381 14.0634 5.44214 14.4464 5.44214H16.1167V5.45022C18.3982 5.4664 19.6204 6.50954 19.2375 8.93546C18.879 11.1916 17.1353 12.1619 15.0575 12.1781L14.2345 17.3857H15.4486C20.5738 17.3857 24.7619 14.1188 25.5849 8.95971Z" fill="#30637F"/>
+                            <path d="M8.12393 12.6147L9.19948 5.88684H8.0506C7.51282 5.88684 6.82023 5.58764 6.61653 5.03777C6.55135 4.85178 6.39653 4.21296 7.28468 3.59031C7.60245 3.37198 7.80616 3.12938 7.8469 2.9434C7.88764 2.74932 7.83875 2.57951 7.70023 2.45013C7.50467 2.26414 7.12171 2.15902 6.63283 2.15902C5.80987 2.15902 5.23135 2.62803 5.17431 2.96765C5.13357 3.21833 5.32913 3.42049 5.50024 3.54988C6.01357 3.92994 6.13579 4.47981 5.81802 4.99734C5.49209 5.53104 4.78321 5.87875 4.02543 5.88684H2.8521C2.79628 6.26079 2.25177 9.69489 1.77203 12.7205L1.77185 12.7216C1.41137 14.9951 1.0875 17.0376 1.03507 17.3776H7.39875C7.41603 17.2698 7.455 17.0202 7.51204 16.6549C7.64327 15.8145 7.87013 14.3617 8.14838 12.6147H8.12393Z" fill="#30637F"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.69259 19.6997H3.29184C4.39998 19.6997 4.66887 20.2577 4.58739 20.7671C4.5222 21.1795 4.23702 21.4868 3.74813 21.6889C4.36739 21.9234 4.61183 22.2873 4.5222 22.8615C4.40813 23.5812 3.78073 24.1149 2.95777 24.1149H0L0.69259 19.6997ZM2.41184 21.5272C2.91703 21.5272 3.15332 21.2604 3.20221 20.945C3.2511 20.6054 3.09628 20.3709 2.5911 20.3709H2.14295L1.9637 21.5272H2.41184ZM2.13481 23.4356C2.65629 23.4356 2.95777 23.2254 3.0311 22.7968C3.08814 22.4248 2.87628 22.2065 2.3711 22.2065H1.85777L1.66222 23.4437H2.13481V23.4356Z" fill="#30637F"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.99943 23.8308C7.16239 24.1219 7.48831 24.1947 8.16461 24.1462L8.55572 23.2405C8.17276 23.2324 8.15646 23.1273 8.2135 22.7877L8.36831 21.8173C8.49868 20.9601 7.79794 20.6367 7.00758 20.6367C6.38832 20.6367 5.85054 20.8227 5.29647 21.2189L5.14166 22.2216C5.78536 21.7849 6.16017 21.6394 6.60832 21.6394C6.99128 21.6394 7.1135 21.7526 7.08091 22.0599C6.89744 22.1837 6.58507 22.2616 6.25841 22.3431C5.85972 22.4425 5.43973 22.5472 5.20684 22.7472C5.01129 22.917 4.88907 23.1192 4.85647 23.3294C4.78314 23.7661 5.05203 24.1623 5.81795 24.1623C6.24165 24.1623 6.64091 24.0491 6.99943 23.8308ZM6.54903 22.7962C6.70854 22.75 6.86817 22.7037 6.99128 22.6259L6.91795 23.1111C6.8935 23.2648 6.88535 23.3456 6.90165 23.4265C6.6898 23.572 6.42906 23.661 6.21721 23.661C5.99721 23.661 5.85869 23.4993 5.89128 23.2809C5.93943 22.973 6.24403 22.8847 6.54903 22.7962Z" fill="#30637F"/>
+                            <path d="M9.42754 20.6933H10.7801L10.7068 21.138C11.1386 20.7741 11.4646 20.6367 11.8883 20.6367C12.646 20.6367 12.9964 21.0976 12.8742 21.8496L12.5238 24.1057H11.1712L11.4646 22.2378C11.5216 21.8981 11.4157 21.7364 11.1549 21.7364C10.9431 21.7364 10.7475 21.8496 10.5601 22.1003L10.2505 24.0976H8.89791L9.42754 20.6933Z" fill="#30637F"/>
+                            <path d="M15.2778 19.6986H13.9252L13.2326 24.1057H14.5852L14.8297 22.5288H14.846L15.8726 24.1057H17.5756L16.2393 22.1488L17.9015 20.6932H16.2311L14.9356 21.8657L15.2778 19.6986Z" fill="#30637F"/>
+                            <path d="M18.7165 19.6997H20.2728L19.5883 24.1068H18.032L18.7165 19.6997Z" fill="#30637F"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.2547 19.6986H21.0303L20.3377 24.1057H22.8473C24.3547 24.1057 25.1532 22.9655 25.308 21.9628C25.471 20.9358 24.9739 19.6986 23.2547 19.6986ZM23.768 21.8981C23.6458 22.6825 23.2302 23.0544 22.4725 23.0544H22.0651L22.4236 20.7417H22.8391C23.6784 20.7417 23.8577 21.3159 23.768 21.8981Z" fill="#30637F"/>
+                        </svg>
+                        Mobilt BankID                            
+                    </button>
+                </div>
+
+                <div class="mt-3 mb-3">
+                    <button class="login_btn" id="mobile_pw">
+                        Lösenord                         
+                    </button>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div id="bankIdModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">      
+          <div class="modal-content">            
+            <div class="modal-body">
+                <div class="modal_title">
+                    Logga in med mobilt BankID
+                </div>
+                <div class="modal_text">
+                    Fält markerade med <span class="red_star">*</span> är obligatoriska
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="password">Personnummer</label>
+                    <span class="reqire_star">*</span>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="andreas@uxd.nu">
+                </div>
+
+                <div class="custom_checkbox">
+                    <label class="custom-control overflow-checkbox">
+                        <input type="checkbox" class="overflow-control-input" >
+                        <span class="overflow-control-indicator"></span>
+                        <span class="overflow-control-description">Kom ihåg mig</span>
+                    </label>
+                </div>             
+
+                <div class="mt-3">
+                    <button class="rend_btn" >
+                        Lösenord                         
+                    </button>
+                </div>
+
+                <div class="bank_desc mt-2 mb-3" id = "goto_pwModal">
+                    Logga in med e-post och lösenord
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div id="passwordModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">      
+          <div class="modal-content">            
+            <div class="modal-body">
+                <div class="modal_title">
+                    Logga in med lösenord
+                </div>
+                <div class="modal_text">
+                    Fält markerade med <span class="red_star">*</span> är obligatoriska
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="email">E-post</label>
+                    <span class="reqire_star">*</span>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="andreas@uxd.nu">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="password">Lösenord</label>
+                    <span class="reqire_star">*</span>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="andreas@uxd.nu">
+                    <div class="text-right">
+                        Glömt lösenord?
+                    </div>
+                </div>
+
+                <div class="custom_checkbox">
+                    <label class="custom-control overflow-checkbox">
+                        <input type="checkbox" class="overflow-control-input" >
+                        <span class="overflow-control-indicator"></span>
+                        <span class="overflow-control-description">Kom ihåg mig</span>
+                    </label>
+                </div>             
+
+                <div class="mt-3">
+                    <button class="rend_btn" >
+                        Lösenord                         
+                    </button>
+                </div>
+
+                <div class="bank_desc mt-2 mb-3" id="goto_bankId">
+                    Logga in med BankID
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
 
 
 	<section class="search_box">

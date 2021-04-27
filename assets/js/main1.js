@@ -30,6 +30,28 @@ $(document).ready(function () {
     } else{
         $('#dropdown07').addClass('show');
     }    
+
+    $('#monbile_bankId').click(function(){
+        $('#loginModal').modal('hide');
+        $('#bankIdModal').modal('show');
+    });
+
+    $('#mobile_pw').click(function(){
+        $('#loginModal').modal('hide');
+        $('#passwordModal').modal('show');
+    });
+
+    $('#goto_pwModal').click(function(){
+        $('#bankIdModal').modal('hide');
+        $('#passwordModal').modal('show');
+    });
+
+    $('#goto_bankId').click(function(){
+        $('#passwordModal').modal('hide');
+        $('#bankIdModal').modal('show');        
+    });
+
+
     
 }); 
 
