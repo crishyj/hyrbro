@@ -1690,31 +1690,31 @@
 
             // });                    
 
-            function checkDates(start,end) {
-                $.ajax({
-                    url: 'https://test.hyrbro.se/ajax//',
-                    type: 'post',
-                    data: { type: "checkdates", product: 'slapvagnslift-dinolift-105tl-bks63m', start: start, end:end  },
-                    dataType: 'json',
-                    success: function (rawJSON) {
-                        if (rawJSON.booking == true) {
-                            $('#bookingPerDay').show();
-                            $('#bookingPerDayPrice').html(rawJSON.pricePerday);
-                            $('#bookingTotally').show();
-                            $('#bookingTotallyNumDays').html(rawJSON.numberOfDays);
-                            $('#bookingTotallyCost').html(rawJSON.totalCost);
-                        } else {
-                           alert(data);
-                        }                       
-                        $('#calender_start').html(start);
-                        $('#calender_end').html(end);
-                        $('#addrental').prop("disabled",false).css('background-color', '#F6C143');
-                    },
-                    error: function (xhr, ajaxOptions, thrownError) {
-                        alert(thrownError);
-                    }
-                }); 
-            }
+            // function checkDates(start,end) {
+            //     $.ajax({
+            //         url: 'https://test.hyrbro.se/ajax//',
+            //         type: 'post',
+            //         data: { type: "checkdates", product: 'slapvagnslift-dinolift-105tl-bks63m', start: start, end:end  },
+            //         dataType: 'json',
+            //         success: function (rawJSON) {
+            //             if (rawJSON.booking == true) {
+            //                 $('#bookingPerDay').show();
+            //                 $('#bookingPerDayPrice').html(rawJSON.pricePerday);
+            //                 $('#bookingTotally').show();
+            //                 $('#bookingTotallyNumDays').html(rawJSON.numberOfDays);
+            //                 $('#bookingTotallyCost').html(rawJSON.totalCost);
+            //             } else {
+            //                alert(data);
+            //             }                       
+            //             $('#calender_start').html(start);
+            //             $('#calender_end').html(end);
+            //             $('#addrental').prop("disabled",false).css('background-color', '#F6C143');
+            //         },
+            //         error: function (xhr, ajaxOptions, thrownError) {
+            //             alert(thrownError);
+            //         }
+            //     }); 
+            // }
 
 			var data = ["2021-05-08","2021-05-09","2021-05-14","2021-05-15","2021-05-16","2021-06-19","2021-06-20","2021-07-03","2021-07-04"];
 			initCalendar();
