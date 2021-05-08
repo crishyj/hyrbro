@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="./assets/css/navigation.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="./assets/css/jquery.calendar.css">
+	<link rel="stylesheet" href="./assets/css/hotel-datepicker.css">
 </head>
 
 <body>
@@ -809,7 +811,7 @@
                 <div class="form-group mt-3">
                     <label for="password">Lösenord</label>
                     <span class="reqire_star">*</span>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="andreas@uxd.nu">
+                    <input type="password" name="password" id="password1" class="form-control" placeholder="andreas@uxd.nu">
                     <div class="text-right">
                         Glömt lösenord?
                     </div>
@@ -1607,9 +1609,185 @@
 	<script src="./assets/js/imagesloaded.pkgd.min.js"></script>
 	<script src="./assets/js/bootstrap.bundle.min.js"></script>
 	<script src="./assets/js/navigation.js"></script>
+	<script src="./assets/js/reservation-datepicker.js"></script>
+	<script src="./assets/js/fecha.min.js"></script>
+	<script src="./assets/js/jquery.calendar.js"></script>
 	<script src="./assets/js/main.js"></script>
 	<script src="./assets/js/main1.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+	<script>
+        $(document).ready(function () {
+            // $.ajax({
+            //     url: 'https://test.hyrbro.se/ajax//',
+            //     type: 'post',
+            //     data: { type: "getbookeddates", product: 'slapvagnslift-dinolift-105tl-bks63m' },
+            //     dataType: 'json',
+            //     success: function (data) {
+            //     $('#calender_start').html('Välj datum');
+            //     $('#calender_end').html('Välj datum');
+            //     $('#addrental').prop("disabled",true).css('background-color', '#A9A9A9');
+            //         initCalendar(data);
+            //     },
+            //     error: function (xhr, ajaxOptions, thrownError) {
+            //         alert(thrownError);
+            //     }
+            // });   
+
+            // $(".addrelated").on("click", function (e) {
+            //     var relatedID = $(this).attr("id");
+            //     relatedID = parseInt(relatedID.substring(9));
+            //     var numRelated = parseFloat($('#numrelated_' + relatedID).val());
+            //     if (numRelated > 0) {
+
+            //          $.ajax({
+            //             url: 'https://test.hyrbro.se/ajax//',
+            //             type: 'post',
+            //             data: { type: "addproduct", product: relatedID, numproduct: numRelated },
+            //             dataType: 'json',
+            //             success: function (rawJSON) {
+
+            //                 if (rawJSON.booking == true) {
+            //                     $('.mobile_sticky').html(rawJSON.BasketNr);
+            //                     $('.cart_notify').html(rawJSON.BasketNr);
+            //                 } else {
+            //                    alert('Ett fel uppstod');
+            //                 }
+            //             },
+            //             error: function (xhr, ajaxOptions, thrownError) {
+            //                 alert(thrownError);
+            //             }
+            //         }); 
+            //    }
+            // }); 
+                    
+
+            // $('#bookingPerDay').hide();
+            // $('#bookingTotally').hide();
+             
+            // $("#addrental").on("click", function(e) {
+
+            //     $.ajax({
+            //         url: 'https://test.hyrbro.se/ajax//',
+            //         type: 'post',
+            //         data: { type: "makereservation", product: 'slapvagnslift-dinolift-105tl-bks63m', start: $('#calender_start').html(), end:$('#calender_end').html() },
+            //         dataType: 'json',
+            //         success: function (rawJSON) {
+
+            //             if (rawJSON.booking == true) {
+
+            //                 $('.mobile_sticky').html(rawJSON.BasketNr);
+            //                 $('.cart_notify').html(rawJSON.BasketNr);
+                                    
+
+            //             } else {
+            //                alert(data);
+            //             }
+            //         },
+            //         error: function (xhr, ajaxOptions, thrownError) {
+            //             alert(thrownError);
+            //         }
+            //     }); 
+
+            // });                    
+
+            function checkDates(start,end) {
+
+                $.ajax({
+                    url: 'https://test.hyrbro.se/ajax//',
+                    type: 'post',
+                    data: { type: "checkdates", product: 'slapvagnslift-dinolift-105tl-bks63m', start: start, end:end  },
+                    dataType: 'json',
+                    success: function (rawJSON) {
+
+                        if (rawJSON.booking == true) {
+
+                            $('#bookingPerDay').show();
+                            $('#bookingPerDayPrice').html(rawJSON.pricePerday);
+
+                            $('#bookingTotally').show();
+                            $('#bookingTotallyNumDays').html(rawJSON.numberOfDays);
+                            $('#bookingTotallyCost').html(rawJSON.totalCost);
+
+                        } else {
+                           alert(data);
+                        }
+
+                        
+
+                        $('#calender_start').html(start);
+                        $('#calender_end').html(end);
+                        $('#addrental').prop("disabled",false).css('background-color', '#F6C143');
+
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert(thrownError);
+                    }
+                }); 
+            }
+
+			var data = ["2021-05-08","2021-05-09","2021-05-14","2021-05-15","2021-05-16","2021-06-19","2021-06-20","2021-07-03","2021-07-04"];
+			initCalendar();
+
+             function initCalendar() {
+                var calendar = document.getElementById('calendar');
+                var datepicker = new ReservationDatepicker(calendar, {
+                    // disabledDates: disabledDates,
+                    showTopbar: false,
+                    moveBothMonths: true,
+                    startOfWeek: 'monday',
+                    separator: '/',
+                    format: 'YYYY-MM-DD',
+                    i18n: {
+                        //selected: 'Your stay:',
+                        //night: 'Night',
+                        //nights: 'Nights',
+                        //button: 'Close',
+                        //'checkin-disabled': 'Check-in disabled',
+                        //'checkout-disabled': 'Check-out disabled',
+                        'day-names-short': ['Sö', 'Må', 'Ti', 'On', 'To', 'Fr', 'Lö'],
+                        'day-names': ['Söndag', 'Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag'],
+                        'month-names-short': ['Januari', 'Februari', 'Mars', 'April', 'Maj', 'Juni', 'Juli', 'Augusti', 'September', 'Oktober','November', 'December'],
+                        'month-names': ['Januari', 'Februari', 'Mars', 'April', 'Maj', 'Juni', 'Juli', 'Augusti', 'September', 'Oktober','November', 'December'],
+                        //'error-more': 'Date range should not be more than 1 night',
+                        //'error-more-plural': 'Date range should not be more than %d nights',
+                        //'error-less': 'Date range should not be less than 1 night',
+                        //'error-less-plural': 'Date range should not be less than %d nights',
+                        //'info-more': 'Please select a date range of at least 1 night',
+                        //'info-more-plural': 'Please select a date range of at least %d nights',
+                        //'info-range': 'Please select a date range between %d and %d nights',
+                        //'info-default': 'Please select a date range'
+                    },
+                    onSelectRange: function () {
+                        var val = this.getValue().split('/');
+                        var startDate = val[0];
+                        var endDate = val[1];
+                        checkDates(startDate, endDate);
+                       
+                    },
+                    onDayClick: function () {
+                        var val = this.getFirstValue();
+                        if (val == '') {
+                            $('#calender_start').html('Välj datum');
+                            $('#calender_end').html('Välj datum');
+                            $('#addrental').prop("disabled", true).css('background-color', '#A9A9A9');
+
+                            return;
+                        } else {
+                            checkDates(val, val);
+                        }
+                      
+                        //$('#calender_start').html(val);
+                        //$('#calender_end').html(val);
+                        //$('#addrental').prop("disabled",false).css('background-color', '#F6C143');
+                    }
+                });
+                datepicker.open();
+            }
+            
+
+        }); 
+
+    </script>
 
 </body>
 </html>
