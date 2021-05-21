@@ -51,6 +51,18 @@ $(document).ready(function () {
         $('#bankIdModal').modal('show');        
     });
 
+    $('.nav_footerRight').click(function(){
+        $('.nav_footerRight').addClass('active');
+        $('.nav_footerLeft').removeClass('active');        
+        $('.nav_footerLeft').removeClass('inactive');
+    })
+
+    $('.nav_footerLeft').click(function(){
+        $('.nav_footerLeft').addClass('active');
+        $('.nav_footerRight').removeClass('active');        
+        $('.nav_footerRight').removeClass('inactive');
+    })
+
 
     
 }); 

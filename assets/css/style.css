@@ -154,7 +154,7 @@ body {
     text-decoration: revert;
 }
 
-.top_phone, .top_email {
+.top_phone, .top_email, .top_location {
     font-size: 14px;
 }
 
@@ -496,6 +496,12 @@ body {
 
 .mobile_navOnly {
     display: none;
+    max-height: 300px;
+    overflow: auto;
+}
+
+.mobile_navOnly .navigation-col:hover{
+    background-color: rgb(34, 34, 34) !important;
 }
 
 .search_filter {
@@ -1154,6 +1160,7 @@ body {
     background-color: #fff;
     border-radius: 4px;
     padding: 5px 18px;
+    box-shadow: 1px 3px 9px #00000036;
 }
 
 .cart_header{
@@ -1625,6 +1632,252 @@ body {
 /***************** text page end *******************/
 
 
+/***************** order3 page start *******************/
+
+.order3_card{
+    padding-bottom: 50px;
+}
+
+.login_title1{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/**************** order3 page end *********************/
+
+/**************** status page start *******************/
+
+.status_text{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cart_body1{
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 5px 18px;
+    height: 180px;    
+    box-shadow: 1px 3px 9px #00000036;
+}
+
+
+.cart_header1{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.cart_text{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.status_rentImg{
+    border-radius: 50%;
+    border: solid 1px #F5F5F5;
+    padding: 15px;
+}
+
+.status_rentImg img{
+    width: 100%;
+}
+
+.status_rentTitle,
+.status_rentText{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: relative;
+}
+
+.status_rentRight{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.status_divider{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+    width: 80%;
+}
+
+.status_rentBottom{
+    margin-top: -15px;
+}
+
+.status_rentTotal{
+    justify-content: space-between;
+}
+
+.total_text{
+    float: left;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 20px;
+    letter-spacing: 0em;
+
+}
+
+.total_price{
+    float: right;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 20px;
+    letter-spacing: 0em;
+}
+
+.total_exp{
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: right;
+}
+
+.chat_in{
+    display: flex;
+    flex-direction: column;
+    /* overflow-y: scroll;
+    height: 300px; */
+}
+
+.chat_client{
+    background: #E0E0E0;
+    border-radius: 12px;
+    padding: 9px;
+    max-width: 70%;
+    width: fit-content;
+    margin-right: auto;    
+}
+
+
+.chat_me{
+    background: #333333;
+    border-radius: 12px 12px 4px 12px;
+    padding: 9px;
+    max-width: 70%;
+    width: fit-content;
+    color: #ffffff;   
+    flex-direction: row-reverse;
+    margin-left: auto; 
+}
+
+.chat_date{
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.chat_content{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.chat_footer{
+    position: relative;
+}
+
+#chat_text{
+    border: none;
+}
+
+#chat_text:focus{
+    box-shadow: none;
+}
+
+.send-message-button{
+    background: none;
+    border: none;
+    position: absolute;
+    top: 5px;
+    right: 30px;
+}
+
+.send-message-button:focus{
+    outline: none;
+}
+
+.upload-file{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.upload-file input{
+    display: none;
+}
+
+.footer_title1{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.footer_content1{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #222222be;
+}
+
+.status_cart{
+    padding-bottom: 50px;
+}
+
+.status_box{
+    display: flex;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.status_inactive{
+    color: #33333375;
+}
+
+
+
+
+/**************** status page end ********************/
 
 
 @media (max-width: 1200px) {
@@ -1790,8 +2043,14 @@ body {
         padding-top: 20px;
     }
 
-    .nav_footerLeft {
+    .navigation-link .active{
         background: #F6C143;
+        color: #333333;
+    }
+
+    .nav_footerLeft {
+        border: 1px solid #F6C143;
+        color: #F6C143;
         box-shadow: 0px 0px 104px rgba(174, 136, 44, 0.07), 0px 5px 10px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.02);
         border-radius: 12px 0px 0px 12px;
         font-weight: bold;
@@ -1800,7 +2059,7 @@ body {
         align-items: center;
         text-align: center;
         padding: 5px 15px;
-        color: #333333;
+        
     }
 
     .nav_footerRight {
@@ -1905,6 +2164,23 @@ body {
     .thanks_left,
     .thanks_right{
         float: unset;
+    }
+
+    .product_header{
+        display: block;
+    }
+
+    .status_rentTop{
+        width: 130px;
+    }
+
+    .status_rentBottom{
+        margin-top: -15px;
+    }
+
+    
+    .status_rentText{
+        font-size: 13px;
     }
 
 
