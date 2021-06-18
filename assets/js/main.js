@@ -16,6 +16,7 @@ $(document).ready(function(){
 		autoSubmenuIndicator: false,
 		breakpoint: 999999
 	});
+
 	if($("#btn-show").length > 0){
 		document.getElementById("btn-show").addEventListener("click", navigation_hidden.toggleOffcanvas);
 	}

@@ -74,12 +74,24 @@
 							</a>
 						</div>
 						<div class="navigation-login">
-							<a href="" class="mobile_login" data-toggle="modal" data-target="#loginModal">
-								<svg width="47" height="44" viewBox="0 0 47 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M12.0488 30C12.0488 30 10.5616 23 24 23C37.4384 23 35.9512 30 35.9512 30" stroke="#333333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-									<circle cx="24" cy="16" r="6.5" stroke="#333333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</a>
+							<div class="login">
+								<a href="" class="mobile_login" data-toggle="modal" data-target="#loginModal">
+									<svg width="47" height="44" viewBox="0 0 47 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12.0488 30C12.0488 30 10.5616 23 24 23C37.4384 23 35.9512 30 35.9512 30" stroke="#333333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+										<circle cx="24" cy="16" r="6.5" stroke="#333333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+							</div>
+							<div class="logged">
+									<a href="" class="mobile_logged" data-toggle="modal" data-target="#loggedModal">
+										<svg width="40" height="40" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0 22C0 9.84974 9.84974 0 22 0C34.1503 0 44 9.84974 44 22C44 34.1503 34.1503 44 22 44C9.84974 44 0 34.1503 0 22Z" fill="#333333"/>
+											<path d="M11.0448 31C11.0448 31 9.6815 24.3684 22 24.3684C34.3185 24.3684 32.9552 31 32.9552 31" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M21.9408 23.4737C25.0551 23.4737 27.5241 20.8739 27.5241 17.7369C27.5241 14.5998 25.0551 12 21.9408 12C18.8264 12 16.3574 14.5998 16.3574 17.7369C16.3574 20.8739 18.8264 23.4737 21.9408 23.4737Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+											
+									</a>
+							</div>
 							
 							<a href="">
 								<svg width="47" height="44" viewBox="0 0 47 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -682,11 +694,12 @@
 						</ul>
 						<ul class="navigation-menu">
 							<li class="navigation-item align-to-right">
-								<a class="navigation-link" href="#" data-toggle="modal" data-target="#loginModal">
+								<a class="navigation-link login" href="#" data-toggle="modal" data-target="#loginModal">
 									<div class="login">
 										<img src="./assets/img/logouted.png" alt="">
 									</div>
-
+								</a>
+								<a class="navigation-link logged" href="#" data-toggle="modal" data-target="#loggedModal">
 									<div class="logged">
 										<img src="./assets/img/logged.png" alt="">
 									</div>
@@ -748,6 +761,63 @@
                     </button>
                 </div>
             </div>
+          </div>
+        </div>
+    </div>
+
+	<div id="loggedModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">      
+          <div class="modal-content">            
+			<div class="modal-body">
+
+				<div class="modal_title">
+					Registrering som ny kund
+				</div>				
+			
+				<div class="form-group mt-3">
+					<label for="pnr">Namn</label>
+					 <input type="text" id="bankid_name" disabled="" class="form-control" title="Namn" value="">
+				</div>
+			
+				<div class="form-group mt-3">
+					<div class="row">
+						<div class="col-8">
+							<label for="pnr">Mobilnummer (Ex:0701234567)</label>
+							<span class="reqire_star">*</span>
+							<input type="text" name="mobileverification" id="mobileverification" class="form-control" placeholder="070-1234567" autocomplete="off" autofocus="" title="Ange ditt mobilnummer." maxlength="12">
+						</div>
+						<div class="col-4">
+							<button class="rend_btn andra">Andra</button>
+						</div>
+					</div>
+					
+				</div>
+
+				<div class="mt-3" id="mobileverification-show1">
+					<button class="rend_btn" disabled="" id="mobileverfysend">
+						Skicka verifieringskod via SMS
+					</button>
+				</div>
+
+				<div id="mobileverification-show2" style="display:none">
+					<div class="form-group mt-3">
+						<label for="pnr">Ange verifieringskod som skickats till angivet mobilnummer</label>
+						<span class="reqire_star">*</span>
+						<input type="number" name="mobileverification-code" id="mobileverification-code" class="form-control mobileverifynr" placeholder="Ange din verfieringskod." autocomplete="off" autofocus="" title="Ange din verfieringskod." maxlength="12">
+					</div>
+
+					<div class="mt-3">
+						<button class="rend_btn" disabled="" id="mobilecreate">
+							Slutför registrering
+						</button>
+					</div>
+				</div>
+				
+
+				<div class="modal_text" style="padding-top:30px; padding-left:30px; text-align:center">
+					<a href="#" class="bankIDAbort">Avbryt</a>
+				</div>
+			</div>
           </div>
         </div>
     </div>
@@ -1516,5 +1586,11 @@
 	<script src="./assets/js/navigation.js"></script>
 	<script src="./assets/js/main.js"></script>
 	<script src="./assets/js/main1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.login').css('display', 'none');
+			$('.logged').css('display', 'block');
+		});
+	</script>
 </body>
 </html>

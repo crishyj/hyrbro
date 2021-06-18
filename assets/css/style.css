@@ -157,7 +157,9 @@ body {
 .top_phone, .top_email, .top_location {
     font-size: 14px;
 }
-
+.login{
+    display: block;
+}
 .logged {
     display: none;
 }
@@ -166,22 +168,22 @@ body {
     padding: 10px 0px;
 }
 
-    .has-search .form-control {
-        padding-left: 2.375rem;
-    }
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
 
-    .has-search .form-control-feedback {
-        position: absolute;
-        z-index: 2;
-        display: block;
-        width: 2.375rem;
-        height: 2.375rem;
-        line-height: 2.375rem;
-        text-align: center;
-        pointer-events: none;
-        color: #aaa;
-        margin-top: 8px;
-    }
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+    margin-top: 8px;
+}
 
 .busket_btn {
     border: 1px solid #80808075;
@@ -191,9 +193,9 @@ body {
     border-left: none;
 }
 
-    .busket_btn:focus {
-        box-shadow: none;
-    }
+.busket_btn:focus {
+    box-shadow: none;
+}
 
 .menu {
     position: relative;
@@ -207,13 +209,13 @@ body {
     height: 40px;
 }
 
-    .search_box .container {
-        padding-right: 8px;
-    }
+.search_box .container {
+    padding-right: 8px;
+}
 
-    .search_box a input {
-        width: 100%;
-    }
+.search_box a input {
+    width: 100%;
+}
 
 .has-search .dropdown-menu {
     transform: translate3d(0px, 36px, 0px) !important;
@@ -362,29 +364,29 @@ body {
     padding: 10px;
 }
 
-    .navigation-col a {
-        color: #333333;
-    }
+.navigation-col a {
+    color: #333333;
+}
 
-    .navigation-col:hover {
-        background-color: #F5F5F5;
-    }
+.navigation-col:hover {
+    background-color: #F5F5F5;
+}
 
-        .navigation-col:hover .menu_btn {
-            background-color: #F6C143;
-            color: #333333;
-            font-weight: 600;
-        }
+.navigation-col:hover .menu_btn {
+    background-color: #F6C143;
+    color: #333333;
+    font-weight: 600;
+}
 
 .ovriga_menu .navigation-col:hover {
     background-color: initial;
 }
 
-    .ovriga_menu .navigation-col:hover .menu_btn {
-        background-color: inherit;
-        color: inherit;
-        font-weight: 400;
-    }
+.ovriga_menu .navigation-col:hover .menu_btn {
+    background-color: inherit;
+    color: inherit;
+    font-weight: 400;
+}
 
 .navigation-col a:hover {
     text-decoration: none;
@@ -399,10 +401,10 @@ body {
     display: none;
 }
 
-    .submenu-indicator:after {
-        border-width: 0 2px 2px 0;
-        border-color: #F6C143;
-    }
+.submenu-indicator:after {
+    border-width: 0 2px 2px 0;
+    border-color: #F6C143;
+}
 
 .cart_notify {
     background: #ff0000;
@@ -422,14 +424,14 @@ body {
     text-align: center;
 }
 
-    .menu_img img {
-        border: 1px solid #E0E0E0;
-        width: 160px;
-        height: 160px;
-        box-sizing: border-box;
-        border-radius: 100px;
-        background: #fff;
-    }
+.menu_img img {
+    border: 1px solid #E0E0E0;
+    width: 160px;
+    height: 160px;
+    box-sizing: border-box;
+    border-radius: 100px;
+    background: #fff;
+}
 
 .menu_btn {
     margin: auto;
@@ -439,9 +441,9 @@ body {
     padding: 7px 25px;
 }
 
-    .menu_btn:hover {
-        /* background-color: #F6C143; */
-    }
+.menu_btn:hover {
+    /* background-color: #F6C143; */
+}
 
 .lmenu {
     display: block;
@@ -454,11 +456,11 @@ body {
     display: inline-flex;
 }
 
-    .lmenu_btn:hover {
-        color: #424242 !important;
-        font-weight: 600 !important;
-        background-color: #F6C143 !important;
-    }
+.lmenu_btn:hover {
+    color: #424242 !important;
+    font-weight: 600 !important;
+    background-color: #F6C143 !important;
+}
 
 .has-search input {
     height: 56px;
@@ -499,6 +501,10 @@ body {
     max-height: 300px;
     overflow: auto;
 }
+.container .mobile_navOnly{
+    max-height: initial !important;
+    overflow: unset;
+}
 
 .mobile_navOnly .navigation-col:hover{
     background-color: rgb(34, 34, 34) !important;
@@ -529,9 +535,9 @@ body {
     border-radius: 4px;
 }
 
-    .search_img img {
-        width: 100%;
-    }
+.search_img img {
+    width: 100%;
+}
 
 .search_desc {
     font-family: Nunito;
@@ -542,6 +548,15 @@ body {
     color: #222222;
     opacity: 0.8;
     padding-top: 20px;
+}
+
+.andra{
+    background-color: gray !important;
+    color: #fff;   
+    height: calc(1.2em + .75rem + 2px) !important;
+    position: absolute;
+    bottom: 0;
+    width: 80% !important;
 }
 
 
@@ -1130,25 +1145,117 @@ body {
     margin-top: 10px;
 }
 
-    .rend_changeDate a {
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 19px;
-        letter-spacing: 0em;
-        text-align: center;
-        color: #F5F5F5;
-    }
+.rend_changeDate a {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #F5F5F5;
+}
 
-        .rend_changeDate a:hover {
-            text-decoration: none;
-        }
+.rend_changeDate a:hover {
+    text-decoration: none;
+}
 
 
 .mobile_navOnly .checkSec_item {
     width: auto;
     height: auto;
     text-align: center;
+}
+
+.price_allperiod{
+    border: solid 1px #e0e0e0;
+    border-radius: 4px;
+    display: flex;
+    background-color: #ffffff;
+    justify-content: space-between;
+    height: 48px;
+    padding: 12px 10px;
+    margin-bottom: 2px;
+}
+
+.left_allperiod{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.right_allperiod{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: right;
+}
+
+.left_allperiod b{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.left_allperiodbadge{
+    background: rgba(246, 193, 67, 0.3);
+    border-radius: 20px;
+    color: rgba(164, 127, 40, 1);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 5px 10px;
+}
+
+.right_allperiod1{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: right;
+    font-family: Nunito;
+}
+
+.pcart_title{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.pcart_box{
+    position: relative;
+}
+
+.pcart_price{
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.pcart_box select{
+    position: absolute;
+    right: 0;
+    border-radius: 4px;
+    border: solid 1px rgba(51, 51, 51, 0.5);
+    padding: 0 5px;
+
 }
 
 
@@ -1230,10 +1337,11 @@ body {
     letter-spacing: 0em;
     text-align: left;
     display: flex;
+    padding: 20px 0;
 }
 
 .cart_quantity{
-    width: 90px;
+    width: 60px;
     height: 34px;
     border: solid 1px #33333377;
     border-radius: 45px;
@@ -1407,6 +1515,51 @@ body {
     height: 50px;
     color: #ffffff;
 } 
+
+.trash{
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.cart_label{
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.cart_refresh{
+    color: rgba(42, 100, 177, 1);
+    padding: 25px 18px;
+    text-align: right;
+}
+
+.cart_total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart_header1{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(51, 51, 51, 0.5);
+}
+
+.cart_price1{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: rgba(51, 51, 51, 0.5);
+}
 
 
 /***************** order1 page end *******************/
@@ -1687,7 +1840,7 @@ body {
 
 .status_rentImg{
     border-radius: 50%;
-    border: solid 1px #F5F5F5;
+    border: solid 1px #e2d9d9;
     padding: 15px;
 }
 
@@ -1975,6 +2128,10 @@ body {
         width: 45px;
     }
 
+    .navigation-login .logged{
+        padding-top: 5px;
+    }
+
     .nav_ext .nav-link {
         padding: .5rem 0;
     }
@@ -2181,6 +2338,10 @@ body {
     
     .status_rentText{
         font-size: 13px;
+    }
+
+    .cart_refresh{
+        text-align: left;
     }
 
 
