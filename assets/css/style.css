@@ -1293,11 +1293,11 @@ body {
 {
     font-size: 16px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 800;
     line-height: 22px;
     letter-spacing: 0em;
     text-align: left;
-    width: 200px;
+    /* width: 200px; */
 }
 
 .cart_descTitle{
@@ -1327,6 +1327,7 @@ body {
     line-height: 22px;
     letter-spacing: 0em;
     text-align: right;
+    padding-top: 3px;
 }
 
 .cart_quantityPart{
@@ -1517,7 +1518,7 @@ body {
 } 
 
 .trash{
-    padding: 20px 0;
+    padding: 0 0 0px 0;
     cursor: pointer;
 }
 
@@ -1561,6 +1562,37 @@ body {
     color: rgba(51, 51, 51, 0.5);
 }
 
+.calc{
+    background-color: rgb(158 158 158 / 36%);
+    color: #2196F3;
+    width: fit-content;
+    padding: 0px 10px;
+}
+
+.cart_itemTitle1{
+    font-size: 14px;
+}
+
+.cart_date{
+    font-size: 12px;
+}
+
+.txtAcrescimo{
+    width: 30px;
+    border: none;
+    text-align: center;
+    background-color: transparent;
+    color: #2196F3;
+}
+
+.cart_price2{
+    text-decoration-line: line-through; 
+    font-size: 14px;
+}
+
+.first_price{
+    padding-top: 10px;
+}
 
 /***************** order1 page end *******************/
 
@@ -2291,7 +2323,7 @@ body {
 
     .cart_itemTitle{
         width: auto;
-        font-size: 13px;
+        /* font-size: 13px; */
     }
 
     .cart_descTitle,
